@@ -4,9 +4,13 @@ npm create vite@latest
 <img src="https://www.svgrepo.com/show/374167/vite.svg" width=10% height=10%>
 
 Select React using Arrows 
+
+
 <img src="https://www.svgrepo.com/show/354259/react.svg" width=10% height=10%>
 
 Select javascript+swc
+
+
 <img src="https://www.svgrepo.com/show/354419/swc.svg" width=10% height=10%>
 
 # npm i or npm install
