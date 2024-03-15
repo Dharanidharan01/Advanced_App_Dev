@@ -31,6 +31,7 @@ Add the paths to all of your template files in your tailwind.config.js file.
 
 
   content: [
+  
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
