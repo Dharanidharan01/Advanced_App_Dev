@@ -1,9 +1,10 @@
 ## INSTALLATION
 ![image](https://github.com/Dharanidharan01/Advanced_App_Dev/assets/110535314/c48594db-c3ec-48ff-9b1d-6d1b18811404)
 
-npm create vite@latest   ![image](https://github.com/Dharanidharan01/Advanced_App_Dev/assets/110535314/a0510703-c6c1-4d06-8b6a-7baa64c17012)
+npm create vite@latest   
 
 |
 |
-select React ![image](https://github.com/Dharanidharan01/Advanced_App_Dev/assets/110535314/538d05f8-4e7f-484d-b22f-f3137b5b2ada)
+select React ![image](https://github.com/Dharanidharan01/Advanced_App_Dev/assets/110535314/1ee24962-cb2b-49d8-94d6-d1d70eb45cde)
+
 
