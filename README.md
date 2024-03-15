@@ -49,7 +49,8 @@ Add the @tailwind directives for each of Tailwind’s layers to your ./src/index
 
 # Start your build process
 Run your build process with npm run dev
-
-copyCodeBlock('npm run dev')
+```
+npm run dev
+```
 
 
