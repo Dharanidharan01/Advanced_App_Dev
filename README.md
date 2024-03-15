@@ -1,4 +1,6 @@
-## INSTALLATION
+## Advanced App Development Setup Guide with Vite, React, and Tailwind CSS
+
+# INSTALLATION
 ```
 npm create vite@latest
 ```
