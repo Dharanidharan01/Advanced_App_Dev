@@ -18,7 +18,7 @@ Select javascript+swc
 ## install Tailwind CSS
 
 <img src="https://www.svgrepo.com/show/374118/tailwind.svg" width=10% height=10%>
-# Install Tailwind CSS
+
 Install tailwindcss and its peer dependencies, then generate your tailwind.config.js and postcss.config.js files.
 
 npm install -D tailwindcss postcss autoprefixer
