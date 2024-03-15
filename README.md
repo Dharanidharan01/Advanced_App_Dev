@@ -22,6 +22,8 @@ Select javascript+swc
 Install tailwindcss and its peer dependencies, then generate your tailwind.config.js and postcss.config.js files.
 
 npm install -D tailwindcss postcss autoprefixer
+
+
 npx tailwindcss init -p
 
 # Configure your template paths
@@ -29,7 +31,9 @@ Add the paths to all of your template files in your tailwind.config.js file.
 
 content: [
     "./index.html",
+    
     "./src/**/*.{js,ts,jsx,tsx}",
+    
   ],
 
 # Add the Tailwind directives to your CSS
