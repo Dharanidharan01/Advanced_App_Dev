@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Public/Header';
 import Footer from '../components/Public/Footer';
+import Header from '../components/Public/Header';
+import Navbar from '../components/Public/Navbar';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -31,7 +32,9 @@ const ContactPage = () => {
 
   return (
     <div className="container mx-auto mt-8">
-      <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
+      <Header/>
+      <Navbar/>
+      <h1 className="text-2xl font-bold mb-4 bg-color-grey">Contact Us</h1>
       <form onSubmit={handleSubmit} className="max-w-lg">
         <div className="mb-4">
           <label htmlFor="name" className="block text-gray-700 font-semibold">Name</label>
