@@ -13,6 +13,7 @@ Select javascript+swc
 
 
 <img src="https://www.svgrepo.com/show/354419/swc.svg" width=10% height=10%>
+
  ```
  npm i or npm install
  ```
