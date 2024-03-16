@@ -2,16 +2,43 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  // State to track whether the card should be displayed or not
-  const [showCard, setShowCard] = useState(false);
+  // State to track whether the cards should be displayed or not
+  const [showJobs, setShowJobs] = useState(false);
+  const [showCompanies, setShowCompanies] = useState(false);
+  const [showServices, setShowServices] = useState(false);
+  const [showEmployee, setShowEmployee] = useState(false);
 
-  // Function to toggle the state
-  const toggleCard = () => {
-    setShowCard(!showCard);
+  // Function to toggle the state of each card
+  const toggleJobs = () => {
+    setShowJobs(!showJobs);
+    setShowCompanies(false);
+    setShowServices(false);
+    setShowEmployee(false);
+  };
+
+  const toggleCompanies = () => {
+    setShowCompanies(!showCompanies);
+    setShowJobs(false);
+    setShowServices(false);
+    setShowEmployee(false);
+  };
+
+  const toggleServices = () => {
+    setShowServices(!showServices);
+    setShowJobs(false);
+    setShowCompanies(false);
+    setShowEmployee(false);
+  };
+
+  const toggleEmployee = () => {
+    setShowEmployee(!showEmployee);
+    setShowJobs(false);
+    setShowCompanies(false);
+    setShowServices(false);
   };
 
   return (
-    <nav className="bg-white py-4">
+    <nav className="bg-white py-4 ">
       <div className="container mx-auto px-10 flex justify-between items-center mt-8"> {/* Add px-4 for horizontal padding */}
         <div className="flex items-center">
           {/* Logo */}
@@ -20,39 +47,169 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="flex items-center mr-20 space-x-6">
-          {/* Home Link */}
-          <Link to="/" className="text-black hover:text-orange-900">Jobs</Link>
+          {/* Jobs Card */}
+          <div className="relative">
+            
+            <button onMouseOver={toggleJobs} className="text-black hover:text-orange-900 focus:outline-none ">
+              Jobs
+            </button>
+            {showJobs && (
+              <div className="absolute right-0 mt-2 w-max bg-white rounded-lg shadow-lg max-screen drop-shadow-2xl"> {/* Increased max-width */}
+                <div className="p-6"> {/* Increased padding */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6"> {/* Increased gap between grid items */}
+                    <div>
+                      <h2 className="text-lg font-semibold mb-3">Popular Categories</h2> {/* Adjusted margin */}
+                      <ul className="text-sm space-y-3"> {/* Adjusted margin */}
+                        <li className="mb-1">T Jobs</li>
+                        <li className="mb-1">Sales Jobs</li>
+                        <li className="mb-1">Marketing Jobs</li>
+                        <li className="mb-1">Data Science Jobs</li>
+                        <li className="mb-1">HR Jobs</li>
+                        <li className="mb-1">Engineering Jobs</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h2 className="text-lg font-semibold mb-3">Jobs in Demand</h2> {/* Adjusted margin */}
+                      <ul className="text-sm space-y-3"> {/* Adjusted margin */}
+                        <li className="mb-1">Fresher Jobs</li>
+                        <li className="mb-1">MNC Jobs</li>
+                        <li className="mb-1">Remote Jobs</li>
+                        <li className="mb-1">Work from Home Jobs</li>
+                        <li className="mb-1">Walk-in Jobs</li>
+                        <li className="mb-1">Part-time Jobs</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h2 className="text-lg font-semibold mb-3">Jobs by Location</h2> {/* Adjusted margin */}
+                      <ul className="text-sm space-y-3"> {/* Adjusted margin */}
+                        <li className="mb-1">Jobs in Delhi</li>
+                        <li className="mb-1">Jobs in Mumbai</li>
+                        <li className="mb-1">Jobs in Bangalore</li>
+                        <li className="mb-1">Jobs in Hyderabad</li>
+                        <li className="mb-1">Jobs in Chennai</li>
+                        <li className="mb-1">Jobs in Pune</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h2 className="text-lg font-semibold mb-3">Jobs by Category</h2> 
+                      <ul className="text-sm space-y-3">
+                        <li className="mb-1">Jobs by Skill</li>
+                        <li className="mb-1">Jobs by Location</li>
+                        <li className="mb-1">Jobs by Designation</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="mt-6"> {/* Increased margin */}
+                    {/* <Link to="/job-alert" className="text-blue-500 hover:underline">Create Free Job Alert</Link> */}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
 
-          {/* Contact Link */}
-          <Link to="/contact" className="text-black hover:text-orange-900">Companies</Link>
-          <Link to="/contact" className="text-black hover:text-orange-900">Services</Link>
+          {/* Companies Card */}
+          <div className="relative">
+            <button onMouseOver={toggleCompanies} className="text-black hover:text-orange-900 focus:outline-none">
+              Companies
+            </button>
+            {showCompanies && (
+              <div className="absolute right-0 mt-2 w-max bg-white rounded-lg shadow-lg "> 
+              
+                <div className="p-6 flex flex-wrap gap-20">
+                  <div className="w-30">
+                    <div>
+                      <h1 className="text-lg font-semibold mb-3 ">Categories</h1>
+                      <ul className="text-sm space-y-3">
+                        <li className="mb-1">Unicorn</li>
+                        <li className="mb-1">MNC</li>
+                        <li className="mb-1">Startup</li>
+                        <li className="mb-1">Product based</li>
+                        <li className="mb-1">Internet</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="w-30">
+                    <div>
+                      <h2 className="text-lg font-semibold mb-3">Explore Collections</h2>
+                      <ul className="text-sm space-y-3">
+                        <li className="mb-1">Top companies</li>
+                        <li className="mb-1">IT companies</li>
+                        <li className="mb-1">Fintech companies</li>
+                        <li className="mb-1">Sponsored companies</li>
+                        <li className="mb-1">Featured companies</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="w-30">
+                    <div>
+                      <h1 className="text-lg font-semibold mb-3">Research</h1>
+                      <ul className="text-sm space-y-3">
+                        <li className="mb-1">Interview questions</li>
+                        <li className="mb-1">Company salaries</li>
+                        <li className="mb-1">Company reviews</li>
+                        <li className="mb-1">Salary Calculator</li>
+                        <li className="mb-1">Bond Finder</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+        </div>
+        
+          {/* Services Card */}
+          <div className="relative">
+            <button onMouseOver={toggleServices} className="text-black hover:text-orange-900 focus:outline-none">
+              Services
+            </button>
+            {showServices && (
+              <div className="absolute right-0 mt-2 w-max bg-white rounded-lg shadow-lg ">
+                <div className="p-6 flex flex-wrap gap-20">
+                  <div className="w-30">
+                    <div>
+                      <h1 className="text-lg font-semibold mb-3 ">Resume writing</h1>
+                      <ul className="text-sm space-y-3">
+                        <li className="mb-1">Functional resume</li>
+                        <li className="mb-1">Targeted Resume</li>
+                        <li className="mb-1">Combination Resume</li>
+                        <li className="mb-1">Chronological</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="w-30">
+                    <div>
+                      <h2 className="text-lg font-semibold mb-3">Resume resources</h2>
+                      <ul className="text-sm space-y-3">
+                        <li className="mb-1">Resume maker for freshers</li>
+                        <li className="mb-1">Resume quality score</li>
+                        <li className="mb-1">Resume samples</li>
+                        <li className="mb-1">Job letter samples</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            )}
+          </div>
 
           {/* Dropdown for Employees */}
           <div className="relative">
-            {/* Link to trigger the dropdown */}
-            <button onClick={toggleCard} className="text-black hover:text-orange-900 focus:outline-none">
-              Employees
+            <button className="text-black rounded-full bg-blue-300 px-4 py-2 flex items-center hover:text-orange-900 focus:outline-none ">
+              For Employees
             </button>
-            {/* Conditional rendering of the card */}
-            {showCard && (
-              <div className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg">
-                {/* Card content */}
-                <div className="p-4">
-                  <h2 className="text-xl font-semibold mb-4">Services</h2>
-                  {/* Add your service items here */}
-                  <ul className="space-y-2">
-                    <li>Service 1</li>
-                    <li>Service 2</li>
-                    <li>Service 3</li>
-                  </ul>
-                </div>
+            {showEmployee && (
+              <div className="absolute right-0 mt-2 max-w-xl bg-white rounded-lg shadow-lg">
+                {/* Add employee-specific content here */}
               </div>
             )}
           </div>
 
           {/* Rounded Box with Login and Signup Links */}
           <div className="rounded-full bg-gray-200 px-4 py-2 flex items-center">
-            <Link to="/login" className="text-black hover:text-orange-900">Login</Link>
+
+
+            <Link to="/login" className="text-black hover:text-orange-900 ">Login</Link>
             <span className="text-gray-500 mx-2">|</span> {/* Vertical bar */}
             <Link to="/signup" className="text-black hover:text-orange-900">Sign Up</Link>
           </div>
