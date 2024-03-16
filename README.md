@@ -1,6 +1,6 @@
-## Advanced App Development Setup Guide with Vite, React, and Tailwind CSS
+#JobPilot - Online Job Portal
 
-# INSTALLATION
+## INSTALLATION
 ```
 npm create vite@latest
 ```
