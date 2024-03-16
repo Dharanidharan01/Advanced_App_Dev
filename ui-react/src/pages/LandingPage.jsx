@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Public/Navbar';
 import Footer from '../components/Public/Footer';
 import Header from '../components/Public/Header';
-import imageSrc from '../assets/images/image.jpg';
+import imageSrc from '../assets/images/2150010125.jpg';
 import lightningFastImg from '../assets/images/lightning_fast.jpg';
 import aiPoweredImg from '../assets/images/ai_powered.jpg';
 import endlessIntegrationImg from '../assets/images/endless_integration.jpg';
@@ -22,12 +22,13 @@ const LandingPage = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
+     
       <div className="bg-gray-100 flex-grow">
         <Navbar />
-        <div className="container mx-auto py-12 px-4">
+        <div className=" ml-0 container mx-auto py-12 px-4 mr-0 ">
           <h1 className="text-3xl font-bold text-center mb-6">Unleash Innovation with Our Advanced App Development Platform</h1>
           <p className="text-lg text-center mb-12">Empower your app development journey with state-of-the-art tools and unparalleled support.</p>
-          <img src={imageSrc} alt="Description of the image" className="w-full rounded-lg shadow-lg mb-8" style={{ maxHeight: '500px' }} />
+          <img src={imageSrc} alt="Description of the image" className="w-full rounded-lg shadow-lg mb-8" style={{ maxHeight: '700px' }} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <img src={lightningFastImg} alt="Lightning-Fast Prototyping" className="w-full h-61 object-cover rounded-md mb-4" />
@@ -63,7 +64,7 @@ const LandingPage = () => {
               </ul>
               <br></br>
               <p className='text-yellow-600'>Ideal For: Solo Developers, Small Teams, and Hobbyists</p>
-              <Link to="/basic-plan" className="block mt-10 text-center bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Upgrade</Link>
+              <Link to="/basic-plan" className="block mt-10 text-center bg-purple-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Upgrade</Link>
             </div>
 
             {/* Pro Plan */}
@@ -83,7 +84,7 @@ const LandingPage = () => {
               
               <p className='text-yellow-600'>Ideal For: Growing Startups and Medium-sized Businesses</p>
               <br></br>
-              <Link to="/pro-plan" className="block mt-4 text-center bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Upgrade</Link>
+              <Link to="/pro-plan" className="block mt-4 text-center bg-purple-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Upgrade</Link>
             </div>
 
             {/* Enterprise Plan */}
@@ -101,13 +102,13 @@ const LandingPage = () => {
               </ul>
               <br></br>
               <p className='text-yellow-600'>Ideal For: Large Enterprises and Organizations with Complex Requirements</p>
-              <Link to="/enterprise-plan" className="block mt-10 text-center bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Upgrade</Link>
+              <Link to="/enterprise-plan" className="block mt-10 text-center bg-purple-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Upgrade</Link>
             </div>
           </div>
 
           {/* Limited-Time Offer */}
-          <div className=" mt-12 bg-gradient-to-b from-yellow-100 to-yellow-300 rounded-lg ">
-  <div className="container mx-auto px-4 py-8">
+          <div className=" ml-0 mt-12 bg-gradient-to-b from-yellow-100 to-yellow-300 rounded-lg">
+  <div className="container ml-0 mr-0  px-4 py-8">
     <h2 className="text-2xl font-semibold text-center mb-6">Limited-Time Offer: Build Faster, Save More!</h2>
     <p className="text-lg text-center mb-6">Hurry! For a limited time only, unlock exclusive savings and accelerate your app development journey with [Your Software]. Sign up now and enjoy:</p>
     <ul className="list-disc pl-6 text-left mb-6">
@@ -124,7 +125,7 @@ const LandingPage = () => {
       </ul>
     </div>
     <div className="flex justify-center">
-      <Link to="/claim-offer" className="bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-600">Claim Offer</Link>
+      <Link to="/claim-offer" className="bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-blue-600">Claim Offer</Link>
     </div>
           </div>
           </div>

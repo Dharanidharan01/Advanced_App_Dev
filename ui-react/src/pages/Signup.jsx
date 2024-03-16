@@ -5,23 +5,23 @@ import Header from '../components/Public/Header';
 import Navbar from '../components/Public/Navbar';
 
 const SignUp = () => {
-    // State variables for managing form inputs
-    const [fullName, setFullName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-  
-    // Function to handle sign-up form submission
-    const handleSignUpSubmit = (e) => {
-      e.preventDefault();
-      // Your sign-up logic here
-      console.log('Signing up with:', fullName, email, password, confirmPassword);
-    };
-  
-    return (
-      <div className="min-h-screen flex justify-center items-center bg-gray-100">
-        <Header/>
-        <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
+  const handleSignUpSubmit = (e) => {
+    e.preventDefault();
+    console.log('Signing up with:', fullName, email, password, confirmPassword);
+  };
+
+  return (
+    <div className="bg-gray-100 min-h-screen">
+      <Navbar />
+      <Header />
+      <Footer />
+      <div className="flex justify-center items-center h-full">
+        <div className="bg-white mt-10 p-8 rounded-lg shadow-lg max-w-md w-full">
           {/* Sign-Up Form */}
           <form onSubmit={handleSignUpSubmit}>
             <h2 className="text-3xl font-semibold mb-4 text-center">Sign Up</h2>
@@ -43,12 +43,14 @@ const SignUp = () => {
             </div>
             <button type="submit" className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring focus:ring-purple-300 w-full">Sign Up</button>
           </form>
-          <br></br>
           <p className="text-center">Already have an account? <Link to="/login" className="text-purple-500 font-semibold hover:underline">Login</Link></p>
+          <br></br>
+          <br></br>
+          <br></br>
         </div>
-        <Footer/>
       </div>
-    );
-  };
-  
-  export default SignUp;
+    </div>
+  );
+};
+
+export default SignUp;
