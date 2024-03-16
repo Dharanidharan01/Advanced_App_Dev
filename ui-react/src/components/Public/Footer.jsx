@@ -8,7 +8,7 @@ const Footer = () => {
         {/* Social Icons */}
         <div className="flex space-x-4 items-center">
           <a href="#" className="text-white hover:text-gray-400">
-            <img src="https://www.svgrepo.com/show/303114/facebook-3-logo.svg" alt="Facebook" className="w-6 h-6" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Media_Viewer_Icon_-_Uploader.svg" alt="Facebook" className="w-6 h-6" />
           </a>
           <a href="#" className="text-white hover:text-gray-400">
             <img src="https://www.iconpacks.net/icons/free-icons-6/free-icon-twitter-x-logo-black-square-rounded-20852.png" alt="Twitter" className="w-6 h-6" />

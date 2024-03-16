@@ -19,7 +19,6 @@ const SignUp = () => {
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
       <Header />
-      <Footer />
       <div className="flex justify-center items-center h-full">
         <div className="bg-white mt-10 p-8 rounded-lg shadow-lg max-w-md w-full">
           {/* Sign-Up Form */}
