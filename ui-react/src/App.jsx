@@ -1,31 +1,30 @@
-
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
- import Header from './components/Public/Navbar';
-import Footer from './components/Public/Footer';
-import LandingPage from './pages/LandingPage';
-import ContactPage from './pages/ContactPage';
-import Navbar from './components/Public/Navbar';
-import Login from './pages/Login';
-import SignUp from './pages/Signup';
 import { Loading } from './pages/Loading';
-import TermsAndConditions from './pages/TermsandConditions';
+
+// Lazy-loaded components
+const Navbar = lazy(() => import('./components/Public/Navbar'));
+const Footer = lazy(() => import('./components/Public/Footer'));
+const LandingPage = lazy(() => import('./pages/LandingPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const Login = lazy(() => import('./pages/Login'));
+const SignUp = lazy(() => import('./pages/Signup'));
+const TermsAndConditions = lazy(() => import('./pages/TermsandConditions'));
 
 const App = () => {
   return (
     <Router>
-      <Routes>
-         <Route path="/header" element={<Navbar/>} />
-          <Route path="/footer" element={<Footer/>} />
-          <Route path="/footer" element={<Header/>} />
-          <Route path="/" element={<LandingPage/>} />
-          <Route path="/contact" element={<ContactPage/>} />
-          <Route path="/login" element={<Login/>} />
-          <Route path="/signup" element={<SignUp/>} />
-          <Route path="/load" element={<Loading/>} />
-          <Route path="/termsandconitions" element={<TermsAndConditions/>} />
-          
-      </Routes>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route path="/navbar" element={<Navbar />} />
+          <Route path="/footer" element={<Footer />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/termsandconditions" element={<TermsAndConditions />} />
+        </Routes>
+      </Suspense>
     </Router>
   );
 };
