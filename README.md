@@ -1,4 +1,4 @@
-#JobPilot - Online Job Portal
+# JobPilot - Online Job Portal
 
 ## INSTALLATION
 ```
