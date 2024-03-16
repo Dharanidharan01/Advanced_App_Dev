@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="w-full lg:w-1/5 mb-4 lg:mb-0">
           <ul className="flex flex-col justify-start lg:justify-start">
             <li className="mb-4"><a href="#" className="text-gray-300 hover:text-white">Privacy Policy</a></li>
-            <li className="mb-4"><a href="termsandconitions" className="text-gray-300 hover:text-white">Terms & Conditions</a></li>
+            <li className="mb-4"><a href="terms" className="text-gray-300 hover:text-white">Terms & Conditions</a></li>
             <li className="mb-4"><a href="#" className="text-gray-300 hover:text-white">Fraud Alert</a></li>
             <li className="mb-4"><a href="#" className="text-gray-300 hover:text-white">Trust & Safety</a></li>
           </ul>

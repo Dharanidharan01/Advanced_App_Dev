@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Public/Header';
 import Navbar from '../components/Public/Navbar';
 import Footer from '../components/Public/Footer';
-
+import Loading from '../Loading';
 const LandingPage = () => {
   const [showPopup, setShowPopup] = useState(false);
 

@@ -6,7 +6,7 @@ import Header from '../components/Public/Header';
 const TermsAndConditions = () => {
   return (
     <div className="">
-      <Header/> 
+      <Header /> 
       <h1 className="mb-8 ml-1 text-3xl font-bold mb-8 mt-20">Terms and Conditions</h1>
 
       <div className="mb-8 ml-5">
@@ -31,7 +31,7 @@ const TermsAndConditions = () => {
 
       {/* Add more sections as needed */}
 
-      <Footer/>
+      <Footer />
     </div>
   );
 };
