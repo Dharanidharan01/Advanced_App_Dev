@@ -1,6 +1,9 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Loading from './Loading';
+import Sidebar from './components/Auth/Sidebar';
+import Dashboard from './pages/Dashboard';
+import ForgotPassword from './pages/ForgotPassword';
 
 
 const Navbar = lazy(() => import('./components/Public/Navbar'));
@@ -23,6 +26,10 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/terms" element={<TermsAndConditions />} />
+          <Route path="/sidebar" element={<Sidebar/>} />
+          <Route path="/dashboard" element={<Dashboard/>} />
+          <Route path="/forgotpassword" element={<ForgotPassword/>} />
+         
         </Routes>
       </Suspense>
     </Router>

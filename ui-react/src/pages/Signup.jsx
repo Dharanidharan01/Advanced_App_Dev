@@ -16,10 +16,10 @@ const SignUp = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 min-h-screen ">
       <Navbar />
       <Header />
-      <div className="flex justify-center items-center h-full">
+      <div className="flex justify-center items-center h-full mb-10">
         <div className="bg-white mt-10 p-8 rounded-lg shadow-lg max-w-md w-full">
           {/* Sign-Up Form */}
           <form onSubmit={handleSignUpSubmit}>
@@ -43,11 +43,9 @@ const SignUp = () => {
             <button type="submit" className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring focus:ring-purple-300 w-full">Sign Up</button>
           </form>
           <p className="text-center">Already have an account? <Link to="/login" className="text-purple-500 font-semibold hover:underline">Login</Link></p>
-          <br></br>
-          <br></br>
-          <br></br>
         </div>
       </div>
+          <Footer/>
     </div>
   );
 };
