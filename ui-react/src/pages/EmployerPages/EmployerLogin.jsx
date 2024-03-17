@@ -23,7 +23,7 @@ const EmployerLogin = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gradient-to-r from-[#000428] to-[#004e92] min-h-screen">
      
       <Header />
      <Navbar/> 

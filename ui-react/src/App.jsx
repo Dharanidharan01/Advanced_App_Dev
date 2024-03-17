@@ -1,17 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Loading from './Loading';
-import Sidebar from './components/Auth/Sidebar';
-import Dashboard from './pages/Dashboard';
-import ForgotPassword from './pages/ForgotPassword';
-import Settings from './components/Auth/Settings';
-import EmployerLogin from './pages/EmployerPages/EmployerLogin';
-import EmployerSignup from './pages/EmployerPages/EmployerSignup';
-import TopBar from './components/Admin/TopBar';
-import AdminSidebar from './components/Admin/AdminSideBar';
-import AdminDashboard from './pages/AdminPages/AdminDashboard';
-import DetailDashboard from './components/Admin/DetailDashboard';
-
 
 const Navbar = lazy(() => import('./components/Public/Navbar'));
 const Footer = lazy(() => import('./components/Public/Footer'));
@@ -20,6 +9,16 @@ const ContactPage = lazy(() => import('./pages/ContactPage'));
 const Login = lazy(() => import('./pages/Login'));
 const SignUp = lazy(() => import('./pages/Signup'));
 const TermsAndConditions = lazy(() => import('./pages/TermsandConditions'));
+const Sidebar = lazy(() => import('./components/Auth/Sidebar'));
+const Dashboard = lazy(() => import('./pages/Dashboard'));
+const ForgotPassword = lazy(() => import('./pages/ForgotPassword'));
+const Settings = lazy(() => import('./components/Auth/Settings'));
+const EmployerLogin = lazy(() => import('./pages/EmployerPages/EmployerLogin'));
+const EmployerSignup = lazy(() => import('./pages/EmployerPages/EmployerSignup'));
+const TopBar = lazy(() => import('./components/Admin/TopBar'));
+const AdminSidebar = lazy(() => import('./components/Admin/AdminSideBar'));
+const AdminDashboard = lazy(() => import('./pages/AdminPages/AdminDashboard'));
+const DetailDashboard = lazy(() => import('./components/Admin/DetailDashboard'));
 
 const App = () => {
   return (

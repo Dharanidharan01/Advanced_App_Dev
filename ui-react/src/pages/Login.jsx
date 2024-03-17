@@ -22,12 +22,12 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gradient-to-r from-[#000428] to-[#004e92] min-h-screen">
       <Navbar />
       <Header />
       
       <div className="flex justify-center items-center h-full">
-        <div className="bg-white mt-10 p-8 rounded-lg shadow-lg max-w-md w-full">
+        <div className="bg-white mt-10 mb-20 p-8 rounded-lg shadow-lg max-w-md w-full">
           {/* Login Form */}
           <form onSubmit={handleLoginSubmit} className="mb-6">
             <h2 className="text-3xl font-semibold mb-4 text-center">Login</h2>
@@ -45,7 +45,7 @@ const Login = () => {
           <p className="text-center">Don't have an account? <Link to="/signup" className="text-purple-500 font-semibold hover:underline">Sign Up</Link></p>
         </div>
       </div>
-      
+      <Footer/>
     </div>
   );
 };

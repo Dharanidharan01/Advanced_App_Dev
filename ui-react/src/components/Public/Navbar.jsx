@@ -39,27 +39,27 @@ const Navbar = () => {
 
   return (
     <nav className="bg-grey-400 py-4 ">
-      <div className="container mx-auto px-10 flex justify-between items-center mt-8"> {/* Add px-4 for horizontal padding */}
+      <div className="container mx-auto px-10 flex justify-between items-center mt-8">
         <div className="flex items-center">
-          {/* Logo */}
-          <img src="/logo.png" alt="Logo" className="h-6 w-auto" /> {/* Adjust the image src and dimensions as needed */}
+          <Link to="/">
+            <img src="/logo.png" alt="Logo" className="h-8 w-auto" />
+          </Link>
         </div>
 
         {/* Navigation Links */}
         <div className="flex items-center mr-20 space-x-6">
           {/* Jobs Card */}
           <div className="relative">
-            
-            <button onMouseOver={toggleJobs} className="text-black hover:text-orange-900 focus:outline-none ">
+            <button onMouseOver={toggleJobs} className="text-white hover:text-[#16dbff] focus:outline-none">
               Jobs
             </button>
             {showJobs && (
-              <div className="absolute right-0 mt-2 w-max bg-white rounded-lg shadow-lg max-screen drop-shadow-2xl"> {/* Increased max-width */}
-                <div className="p-6"> {/* Increased padding */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6"> {/* Increased gap between grid items */}
+              <div className="absolute right-0 mt-2 w-max bg-white rounded-lg shadow-lg max-screen drop-shadow-2xl">
+                <div className="p-6">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                     <div>
-                      <h2 className="text-lg font-semibold mb-3">Popular Categories</h2> {/* Adjusted margin */}
-                      <ul className="text-sm space-y-3"> {/* Adjusted margin */}
+                      <h2 className="text-lg font-semibold mb-3">Popular Categories</h2>
+                      <ul className="text-sm space-y-3">
                         <li className="mb-1">T Jobs</li>
                         <li className="mb-1">Sales Jobs</li>
                         <li className="mb-1">Marketing Jobs</li>
@@ -69,8 +69,8 @@ const Navbar = () => {
                       </ul>
                     </div>
                     <div>
-                      <h2 className="text-lg font-semibold mb-3">Jobs in Demand</h2> {/* Adjusted margin */}
-                      <ul className="text-sm space-y-3"> {/* Adjusted margin */}
+                      <h2 className="text-lg font-semibold mb-3">Jobs in Demand</h2>
+                      <ul className="text-sm space-y-3">
                         <li className="mb-1">Fresher Jobs</li>
                         <li className="mb-1">MNC Jobs</li>
                         <li className="mb-1">Remote Jobs</li>
@@ -80,8 +80,8 @@ const Navbar = () => {
                       </ul>
                     </div>
                     <div>
-                      <h2 className="text-lg font-semibold mb-3">Jobs by Location</h2> {/* Adjusted margin */}
-                      <ul className="text-sm space-y-3"> {/* Adjusted margin */}
+                      <h2 className="text-lg font-semibold mb-3">Jobs by Location</h2>
+                      <ul className="text-sm space-y-3">
                         <li className="mb-1">Jobs in Delhi</li>
                         <li className="mb-1">Jobs in Mumbai</li>
                         <li className="mb-1">Jobs in Bangalore</li>
@@ -91,7 +91,7 @@ const Navbar = () => {
                       </ul>
                     </div>
                     <div>
-                      <h2 className="text-lg font-semibold mb-3">Jobs by Category</h2> 
+                      <h2 className="text-lg font-semibold mb-3">Jobs by Category</h2>
                       <ul className="text-sm space-y-3">
                         <li className="mb-1">Jobs by Skill</li>
                         <li className="mb-1">Jobs by Location</li>
@@ -99,7 +99,7 @@ const Navbar = () => {
                       </ul>
                     </div>
                   </div>
-                  <div className="mt-6"> {/* Increased margin */}
+                  <div className="mt-6">
                     {/* <Link to="/job-alert" className="text-blue-500 hover:underline">Create Free Job Alert</Link> */}
                   </div>
                 </div>
@@ -109,12 +109,11 @@ const Navbar = () => {
 
           {/* Companies Card */}
           <div className="relative">
-            <button onMouseOver={toggleCompanies} className="text-black hover:text-orange-900 focus:outline-none">
+            <button onMouseOver={toggleCompanies} className="text-white hover:text-[#16dbff] focus:outline-none">
               Companies
             </button>
             {showCompanies && (
-              <div className="absolute right-0 mt-2 w-max bg-white rounded-lg shadow-lg "> 
-              
+              <div className="absolute right-0 mt-2 w-max bg-white rounded-lg shadow-lg">
                 <div className="p-6 flex flex-wrap gap-20">
                   <div className="w-30">
                     <div>
@@ -155,15 +154,15 @@ const Navbar = () => {
                 </div>
               </div>
             )}
-        </div>
+          </div>
         
           {/* Services Card */}
           <div className="relative">
-            <button onMouseOver={toggleServices} className="text-black hover:text-orange-900 focus:outline-none">
+            <button onMouseOver={toggleServices} className="text-white hover:text-[#16dbff] focus:outline-none">
               Services
             </button>
             {showServices && (
-              <div className="absolute right-0 mt-2 w-max bg-white rounded-lg shadow-lg ">
+              <div className="absolute right-0 mt-2 w-max bg-white rounded-lg shadow-lg">
                 <div className="p-6 flex flex-wrap gap-20">
                   <div className="w-30">
                     <div>
@@ -195,11 +194,11 @@ const Navbar = () => {
 
           {/* Dropdown for Employees */}
           <div className="relative">
-          <Link to="/esignup">
-  <button className="text-black rounded-full bg-blue-300 px-4 py-2 flex items-center hover:text-orange-900 focus:outline-none">
-    For Employees
-  </button>
-</Link>
+            <Link to="/esignup">
+              <button onMouseOver={toggleEmployee} className="text-black rounded-full bg-blue-300 px-4 py-2 flex items-center hover:text-orange-900 focus:outline-none">
+                For Employees
+              </button>
+            </Link>
             {showEmployee && (
               <div className="absolute right-0 mt-2 max-w-xl bg-white rounded-lg shadow-lg">
                 {/* Add employee-specific content here */}
@@ -209,10 +208,8 @@ const Navbar = () => {
 
           {/* Rounded Box with Login and Signup Links */}
           <div className="rounded-full bg-gray-200 px-4 py-2 flex items-center">
-
-
             <Link to="/login" className="text-black hover:text-orange-900 ">Login</Link>
-            <span className="text-gray-500 mx-2">|</span> {/* Vertical bar */}
+            <span className="text-gray-500 mx-2">|</span>
             <Link to="/signup" className="text-black hover:text-orange-900">Sign Up</Link>
           </div>
         </div>

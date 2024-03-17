@@ -6,10 +6,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'display': ['SF Pro Display', 'sans-serif'], 
-        'helvetica': ['Helvetica', 'Arial', 'sans-serif'], 
+        poppins: ['Poppins', 'sans-serif'],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // No need for tailwindcss-gradients plugin
+  ],
 };
