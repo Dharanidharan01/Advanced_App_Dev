@@ -37,10 +37,12 @@ function Sidebar() {
             <img src="https://www.svgrepo.com/show/498932/settings.svg" alt="Settings Icon" className="w-5 h-5 mr-2" />
             Settings
           </Link>
-          <button className="flex items-center mt-4 bg-gray-200 rounded-full py-1 px-3 hover:bg-gray-300">
-            <img src="https://www.svgrepo.com/show/471638/log-out-01.svg" alt="Logout Icon" className="w-5 h-5 mr-2" />
-            Logout
-          </button>
+          <Link to="/login">
+  <button className="flex items-center mt-4 bg-gray-200 rounded-full py-1 px-3 hover:bg-gray-300">
+    <img src="https://www.svgrepo.com/show/471638/log-out-01.svg" alt="Logout Icon" className="w-5 h-5 mr-2" />
+    Logout
+  </button>
+</Link>
         </div>
       </div>
     </div>

@@ -195,9 +195,11 @@ const Navbar = () => {
 
           {/* Dropdown for Employees */}
           <div className="relative">
-            <button className="text-black rounded-full bg-blue-300 px-4 py-2 flex items-center hover:text-orange-900 focus:outline-none ">
-              For Employees
-            </button>
+          <Link to="/esignup">
+  <button className="text-black rounded-full bg-blue-300 px-4 py-2 flex items-center hover:text-orange-900 focus:outline-none">
+    For Employees
+  </button>
+</Link>
             {showEmployee && (
               <div className="absolute right-0 mt-2 max-w-xl bg-white rounded-lg shadow-lg">
                 {/* Add employee-specific content here */}

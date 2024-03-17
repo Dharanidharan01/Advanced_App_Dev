@@ -8,13 +8,13 @@ function Dashboard() {
   const [isProfileChanged, setIsProfileChanged] = useState(false);
   const [isEditMode, setIsEditMode] = useState(false);
 
-  const [name, setName] = useState("John Doe");
-  const [dob, setDob] = useState("01/01/1990");
-  const [location, setLocation] = useState("New York");
-  const [degree, setDegree] = useState("Bachelor's");
-  const [college, setCollege] = useState("ABC University");
-  const [email, setEmail] = useState("john.doe@example.com");
-  const [contact, setContact] = useState("1234567890");
+  const [name, setName] = useState("Dharanidharan S");
+  const [dob, setDob] = useState("01/12/2003");
+  const [location, setLocation] = useState("Coimbatore");
+  const [degree, setDegree] = useState("Bachelor's of Engineering");
+  const [college, setCollege] = useState("Sri Krishna College of Technology");
+  const [email, setEmail] = useState("dharanidharans175@gmail.com");
+  const [contact, setContact] = useState("9842373765");
 
   // Function to handle profile image upload
   const handleProfileImageUpload = (event) => {
@@ -68,8 +68,8 @@ function Dashboard() {
                     </div>
                     <div className="flex mb-4">
                       <label htmlFor="location">Location:</label>
-                      <input id="location" type="text" value={location} onChange={(e) => setLocation(e.target.value)} className="ml-2 mr-2" />
-                      <label htmlFor="degree">Degree:</label>
+                      <input id="location" type="text" value={location} onChange={(e) => setLocation(e.target.value)} className="ml-10 mr-2" />
+                      <label htmlFor="degree">&nbspDegree:</label>
                       <input id="degree" type="text" value={degree} onChange={(e) => setDegree(e.target.value)} className="ml-2 mr-2" />
                     </div>
                     <div className="flex">
@@ -90,7 +90,7 @@ function Dashboard() {
                     </div>
                     <div className="flex flex-nowrap mb-4">
                       <div><strong>Location:</strong> {location}</div>
-                      <div className="ml-20"><strong>Degree:</strong> {degree}</div>
+                      <div className="ml-20"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Degree:</strong> {degree}</div>
                     </div>
                     <div className="flex flex-nowrap">
                       <div><strong>College:</strong> {college}</div>

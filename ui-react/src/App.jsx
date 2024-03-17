@@ -4,6 +4,13 @@ import Loading from './Loading';
 import Sidebar from './components/Auth/Sidebar';
 import Dashboard from './pages/Dashboard';
 import ForgotPassword from './pages/ForgotPassword';
+import Settings from './components/Auth/Settings';
+import EmployerLogin from './pages/EmployerPages/EmployerLogin';
+import EmployerSignup from './pages/EmployerPages/EmployerSignup';
+import TopBar from './components/Admin/TopBar';
+import AdminSidebar from './components/Admin/AdminSideBar';
+import AdminDashboard from './pages/AdminPages/AdminDashboard';
+import DetailDashboard from './components/Admin/DetailDashboard';
 
 
 const Navbar = lazy(() => import('./components/Public/Navbar'));
@@ -29,7 +36,13 @@ const App = () => {
           <Route path="/sidebar" element={<Sidebar/>} />
           <Route path="/dashboard" element={<Dashboard/>} />
           <Route path="/forgotpassword" element={<ForgotPassword/>} />
-         
+          <Route path="/settings" element={<Settings/>} />
+          <Route path="/elogin" element={<EmployerLogin/>} />
+          <Route path="/esignup" element={<EmployerSignup/>} />
+          <Route path="/atopbar" element={<TopBar/>} />
+          <Route path="/asidebar" element={<AdminSidebar/>} />
+          <Route path="/adashboard" element={<AdminDashboard/>} />
+          <Route path="/detaildashboard" element={<DetailDashboard/>} />
         </Routes>
       </Suspense>
     </Router>
