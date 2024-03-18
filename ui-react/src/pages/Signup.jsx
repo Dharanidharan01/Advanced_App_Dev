@@ -29,7 +29,7 @@ const SignUp = () => {
       <Navbar />
       <Header />
       <div className="flex justify-center items-center h-full mb-10">
-        <div className="bg-white mt-10 p-8 rounded-lg shadow-lg max-w-md w-full">
+        <div className="bg-white bg-opacity-30 mt-10 p-8 rounded-lg shadow-lg max-w-md w-full">
           {/* Sign-Up Form */}
           <form onSubmit={handleSignUpSubmit}>
             <h2 className="text-3xl font-semibold mb-4 text-center">Sign Up</h2>
@@ -49,9 +49,9 @@ const SignUp = () => {
               <label htmlFor="confirmPassword" className="block text-gray-700 font-bold mb-2">Confirm Password</label>
               <input type="password" id="confirmPassword" className="border border-gray-400 rounded-md py-2 px-3 w-full focus:outline-none focus:border-purple-500" placeholder="Confirm your password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
             </div>
-            <button type="submit" className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring focus:ring-purple-300 w-full">Sign Up</button>
+            <button type="submit" className="bg-[#04AECC] hover:bg-[#038BA3] text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring focus:ring-purple-300 w-full">Sign Up</button>
           </form>
-          <p className="text-center">Already have an account? <Link to="/login" className="text-purple-500 font-semibold hover:underline">Login</Link></p>
+          <p className="text-center">Already have an account? <Link to="/login" className="text-bg-[#04AECC] font-semibold hover:underline">Login</Link></p>
         </div>
       </div>
       <Footer/>

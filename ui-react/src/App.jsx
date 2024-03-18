@@ -1,10 +1,15 @@
 import React, { lazy, Suspense, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Loading from './Loading';
-import UserNavbar from './components/Auth/UserNavbar';
+import ErrorPage from './ErrorPage'; // Import the ErrorPage component
 
-const Navbar = lazy(() => import('./components/Public/Navbar'));
-const Footer = lazy(() => import('./components/Public/Footer'));
+// Lazy-loaded components
+const UserNavbar = lazy(() => import('./components/Auth/UserNavbar'));
+const JobPosting = lazy(() => import('./components/Admin/Dashboard/JobPosting'));
+const JobDetailsPage = lazy(() => import('./pages/JobDetailsPage'));
+const PremiumPlan = lazy(() => import('./pages/PremiumPlan'));
+const UpgradeModal = lazy(() => import('./components/Public/UpgradeModal'));
+
 const LandingPage = lazy(() => import('./pages/LandingPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const Login = lazy(() => import('./pages/Login'));
@@ -16,7 +21,6 @@ const ForgotPassword = lazy(() => import('./pages/ForgotPassword'));
 const Settings = lazy(() => import('./components/Auth/Settings'));
 const EmployerLogin = lazy(() => import('./pages/EmployerPages/EmployerLogin'));
 const EmployerSignup = lazy(() => import('./pages/EmployerPages/EmployerSignup'));
-const TopBar = lazy(() => import('./components/Admin/TopBar'));
 const AdminSidebar = lazy(() => import('./components/Admin/AdminSideBar'));
 const AdminDashboard = lazy(() => import('./pages/AdminPages/AdminDashboard'));
 const DetailDashboard = lazy(() => import('./components/Admin/DetailDashboard'));
@@ -32,8 +36,12 @@ const App = () => {
     <Router>
       <Suspense fallback={<Loading />}>
         <Routes>
-          <Route path="/navbar" element={<Navbar />} />
-          <Route path="/footer" element={<Footer />} />
+          <Route path="/navbar" element={<UserNavbar />} />
+          <Route path="/jobposting" element={<JobPosting />} />
+          <Route path="/jobdetails" element={<JobDetailsPage />} />
+          <Route path="/premiumplan" element={<PremiumPlan />} />
+          <Route path="/upgrademodel" element={<UpgradeModal />} />
+
           <Route path="/" element={<LandingPage isLoggedIn={isLoggedIn} />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
@@ -45,11 +53,12 @@ const App = () => {
           <Route path="/settings" element={<Settings />} />
           <Route path="/elogin" element={<EmployerLogin />} />
           <Route path="/esignup" element={<EmployerSignup />} />
-          <Route path="/atopbar" element={<TopBar />} />
           <Route path="/asidebar" element={<AdminSidebar />} />
           <Route path="/adashboard" element={<AdminDashboard />} />
           <Route path="/detaildashboard" element={<DetailDashboard />} />
-          {isLoggedIn && <Route path="/usernav" element={<UserNavbar />} />}
+
+          {/* Fallback route for any unmatched paths */}
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Suspense>
     </Router>

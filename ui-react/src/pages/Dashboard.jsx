@@ -6,7 +6,6 @@ import { AiOutlineFileAdd, AiOutlinePercentage } from 'react-icons/ai';
 import Footer from '../components/Public/Footer';
 import UserNavbar from '../components/Auth/UserNavbar';
 import '@fontsource/poppins';
-
 function Dashboard() {
   const [location, setLocation] = useState("");
   const [name, setName] = useState(""); // Use state for user's name
@@ -21,7 +20,6 @@ function Dashboard() {
     const userData = JSON.parse(localStorage.getItem('userData'));
     if (userData && userData.fullName) {
       setName(userData.fullName);
-      
     }
   }, []);
 
@@ -51,9 +49,11 @@ function Dashboard() {
   };
 
   return (
-    <div className="container mx-auto px-10 mt-0  bg-gradient-to-r from-[#000428] to-[#004e92]">
+    <div className=' bg-gradient-to-r from-[#000428] to-[#004e92] mb-10">
+    <UserNavbar/>'>
+    <div className="container mx-auto px-10 mt-0  bg-gradient-to-r from-[#000428] to-[#004e92] mb-10">
       <UserNavbar/>
-      <div className="rounded-xl mt-0 p-8 shadow-lg mb-0 bg-white">
+      <div className="rounded-xl mt-0 p-8 shadow-lg  bg-white">
         <h1 className="text-3xl font-bold mb-4 text-indigo-400 font-poppins">Dashboard</h1>
         
         {/* Add profile photo */}
@@ -136,7 +136,7 @@ function Dashboard() {
           {/* Existing details */}
         </div>
         
-        <div className="ml-0 bg-white p-4 rounded-md shadow-lg">
+        <div className="dummy">
           {/* Additional sections */}
           <div className="grid grid-cols-2 gap-8 mt-8 w-fit">
             {/* Section 1: IT skills */}
@@ -267,7 +267,7 @@ function Dashboard() {
           </div>
           </div>
           </div>
-         
+          </div>
           <Footer/>
     </div>
   );

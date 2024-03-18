@@ -1,0 +1,15 @@
+.course-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .course-card:hover {
+    transform: scale(1.05);
+    z-index: 1;
+  }
+  
+  .course-card:hover ~ .course-card {
+    transform: scale(0.95);
+  }
+  
