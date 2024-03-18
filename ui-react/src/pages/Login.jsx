@@ -1,23 +1,25 @@
-// Import necessary modules
+// Login.jsx
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Public/Footer';
 import Header from '../components/Public/Header';
 import Navbar from '../components/Public/Navbar';
 
-// Define Login component
-const Login = () => {
+const Login = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    if (email === 'dharanidharans175@gmail.com' && password === 'user1234') {
+    const userData = JSON.parse(localStorage.getItem('userData'));
+    if (userData && userData.email === email && userData.password === password) {
       console.log('Logging in with:', email, password);
+      onLogin(); // Update the login state
       // Redirect to dashboard page
-      window.location.href = '/dashboard';
+      window.location.href = '/';
     } else {
-      alert('Invalid username or password');
+      alert('Invalid email or password');
     }
   };
 

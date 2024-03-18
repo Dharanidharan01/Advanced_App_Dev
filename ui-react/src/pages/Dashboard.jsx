@@ -1,24 +1,36 @@
-import React, { useState } from 'react';
-import { FaUser, FaMapMarkerAlt, FaCalendarAlt, FaPhoneAlt, FaEnvelope, FaCamera } from 'react-icons/fa';
+import React, { useState, useEffect } from 'react';
+import { FaUser, FaMapMarkerAlt, FaCalendarAlt, FaPhoneAlt, FaEnvelope, FaCamera, FaFileUpload} from 'react-icons/fa';
 import { TiLocation } from 'react-icons/ti';
 import { RiProfileLine, RiPencilLine } from 'react-icons/ri';
 import { AiOutlineFileAdd, AiOutlinePercentage } from 'react-icons/ai';
 import Footer from '../components/Public/Footer';
+import UserNavbar from '../components/Auth/UserNavbar';
 import '@fontsource/poppins';
 
-
 function Dashboard() {
-  const [name, setName] = useState("");
   const [location, setLocation] = useState("");
+  const [name, setName] = useState(""); // Use state for user's name
+  const [designation, setDesignation] = useState("Software Engineer");
   const [profileImage, setProfileImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
+  const [resume, setResume] = useState(null);
+  const [resumeName, setResumeName] = useState(null);
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
+  useEffect(() => {
+    // Retrieve user's name from local storage
+    const userData = JSON.parse(localStorage.getItem('userData'));
+    if (userData && userData.fullName) {
+      setName(userData.fullName);
+      
+    }
+  }, []);
 
   const handleLocationChange = (e) => {
     setLocation(e.target.value);
+  };
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
   };
 
   const handleProfileImageChange = (e) => {
@@ -32,17 +44,23 @@ function Dashboard() {
     reader.readAsDataURL(file);
   };
 
- 
+  const handleResumeChange = (e) => {
+    const file = e.target.files[0];
+    setResume(file);
+    setResumeName(file.name); // Set the name of the uploaded resume as preview
+  };
+
   return (
-    <div className="container mx-auto px-10 py-10 bg-gradient-to-r from-[#000428] to-[#004e92]">
-      <div className=" rounded-xl p-8 shadow-lg mb-0 bg-white">
+    <div className="container mx-auto px-10 mt-0  bg-gradient-to-r from-[#000428] to-[#004e92]">
+      <UserNavbar/>
+      <div className="rounded-xl mt-0 p-8 shadow-lg mb-0 bg-white">
         <h1 className="text-3xl font-bold mb-4 text-indigo-400 font-poppins">Dashboard</h1>
         
         {/* Add profile photo */}
-        <div className="flex items-center justify-center mb-4">
+        <div className="flex items-center mt-10 mb-4">
           <label htmlFor="profile-photo" className="cursor-pointer flex items-center">
             {imagePreview ? (
-              <img src={imagePreview} alt="Profile" className="h-20 w-20 rounded-full object-cover" />
+              <img src={imagePreview} alt="Profile" className="size-32 rounded-full object-cover shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]" />
             ) : (
               <>
                 <FaCamera className="ml-2 text-xl" />
@@ -51,13 +69,20 @@ function Dashboard() {
             )}
             <input type="file" id="profile-photo" className="hidden" onChange={handleProfileImageChange} />
           </label>
+          {/* Name, Designation, and Location */}
+          <div className="ml-10">
+            <h1 className="text-3xl font-bold font-poppins">{name}</h1>
+            <p className="text-lg">{designation}</p> {/* Display designation */}
+            <p className="text-lg">{location}</p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+
+        <div className="grid grid-cols-1 gap-4">
           {/* Add name */}
           <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
             <FaUser className="mr-2 text-2xl" />
-            <input type="text" value={name} onChange={handleNameChange} className="text-lg outline-none" placeholder="Add name" />
+            <input type="text" value={name} onChange={handleNameChange} className="text-lg outline-none" placeholder="Change name" />
           </div>
 
           {/* Add location */}
@@ -87,29 +112,163 @@ function Dashboard() {
           {/* Mail */}
           <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
             <FaEnvelope className="mr-2 text-2xl" />
-            <input type="text" className="text-lg outline-none" placeholder="727821tucs039@skct.edu.in" />
+            <input type="text" className="text-lg outline-none" placeholder="example.@gmail.com" />
           </div>
 
-          {/* Verified */}
-          <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
-            <AiOutlinePercentage className="mr-2 text-2xl" />
-            <span className="text-lg">VerifiedOneTheme</span>
-          </div>
+        
 
           {/* Add resume */}
           <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
-            <AiOutlineFileAdd className="mr-2 text-2xl" />
-            <span className="text-lg">Add 10%</span>
+            <FaFileUpload className="mr-2 text-2xl" />
+            <label htmlFor="resume" className="cursor-pointer">
+              <span className="text-lg">{resumeName || "Upload Resume"}</span>
+              <input type="file" id="resume" className="hidden" onChange={handleResumeChange} />
+            </label>
           </div>
 
-          {/* Career profile */}
-          <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
-            <RiProfileLine className="mr-2 text-2xl" />
-            <span className="text-lg">Career profileEditOneTheme</span>
-          </div>
+
+        
+      <div className="rounded-xl p-8 w-90 shadow-lg mb-0 bg-white">
+        <h1 className="text-3xl font-bold mb-4 text-black font-poppins">Career profile</h1>
+        
+        {/* Existing details */}
+        <div className="grid grid-cols-2 gap-4 ml-0">
+          {/* Existing details */}
         </div>
-      </div>
-      
+        
+        <div className="ml-0 bg-white p-4 rounded-md shadow-lg">
+          {/* Additional sections */}
+          <div className="grid grid-cols-2 gap-8 mt-8 w-fit">
+            {/* Section 1: IT skills */}
+            <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
+           
+              <span className="text-lg">IT Skills</span>
+              {/* Add your form inputs here */}
+              <input type="text" className="text-lg outline-none ml-10" placeholder="Add IT skills" />
+            </div>
+
+            {/* Section 2: Projects */}
+            <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
+              
+              <span className="text-lg">Projects</span>
+              {/* Add your form inputs here */}
+              <input type="text" className="text-lg outline-none ml-10" placeholder="Add projects" />
+            </div>
+
+          
+
+            {/* Section 4: Accomplishments */}
+            <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
+             
+              <span className="text-lg">Accomplishments</span>
+              {/* Add your form inputs here */}
+              <input type="text" className="text-lg outline-none ml-10" placeholder="Add accomplishments" />
+            </div>
+
+            {/* Section 5: Online Profile */}
+            <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
+           
+              <span className="text-lg">Online Profile</span>
+              {/* Add your form inputs here */}
+              <input type="text" className="text-lg outline-none ml-10" placeholder="Add online profile link" />
+            </div>
+
+            {/* Section 6: Work Sample */}
+            <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
+             
+              <span className="text-lg">Work Sample</span>
+              {/* Add your form inputs here */}
+              <input type="text" className="text-lg outline-none ml-10" placeholder="Add work sample link" />
+            </div>
+
+            {/* Section 7: White paper / Research publication / Journal entry */}
+            <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
+            
+              <span className="text-lg">White paper / Research publication</span>
+              {/* Add your form inputs here */}
+              <input type="text" className="text-lg outline-none ml-10" placeholder="Add publication link" />
+            </div>
+
+            {/* Section 8: Presentation */}
+            <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
+             
+              <span className="text-lg">Presentation</span>
+              {/* Add your form inputs here */}
+              <input type="text" className="text-lg outline-none ml-10" placeholder="Add presentation link" />
+            </div>
+
+            {/* Section 9: Certification */}
+            <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
+              
+              <span className="text-lg">Certification</span>
+              {/* Add your form inputs here */}
+              <input type="text" className="text-lg outline-none ml-10" placeholder="Add certification details" />
+            </div>
+
+            {/* Section 11: Current industry */}
+            <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
+             
+              <span className="text-lg">Current industry</span>
+              {/* Add your form inputs here */}
+              <input type="text" className="text-lg outline-none" placeholder="Add current industry" />
+            </div>
+
+           
+
+            {/* Section 15: Preferred shift */}
+            <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
+             
+              <span className="text-lg">Preferred shift</span>
+              {/* Add your form inputs here */}
+              <input type="text" className="text-lg outline-none ml-10" placeholder="Add preferred shift" />
+            </div>
+
+            {/* Section 16: Expected salary */}
+            <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
+             
+              <span className="text-lg">Expected salary</span>
+              {/* Add your form inputs here */}
+              <input type="text" className="text-lg outline-none ml-10" placeholder="Add expected salary" />
+            </div>
+
+            {/* Section 19: Differently abled */}
+            <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
+             
+              <span className="text-lg">Differently abled</span>
+              {/* Add your form inputs here */}
+              <input type="text" className="text-lg outline-none ml-10" placeholder="Add differently abled details" />
+            </div>
+
+            {/* Section 20: Career break */}
+            <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
+             
+              <span className="text-lg">Career break</span>
+              {/* Add your form inputs here */}
+              <input type="text" className="text-lg outline-none ml-10" placeholder="Add career break details" />
+            </div>
+
+            {/* Section 21: Work permit */}
+            <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
+             
+              <span className="text-lg">Work permit</span>
+              {/* Add your form inputs here */}
+              <input type="text" className="text-lg outline-none ml-10" placeholder="Add work permit details" />
+            </div>
+
+            {/* Section 22: Address */}
+            <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
+             
+              <span className="text-lg">Address</span>
+              {/* Add your form inputs here */}
+              <input type="text" className="text-lg outline-none ml-10" placeholder="Add address" />
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+         
+          <Footer/>
     </div>
   );
 }

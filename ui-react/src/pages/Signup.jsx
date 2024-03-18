@@ -12,7 +12,16 @@ const SignUp = () => {
 
   const handleSignUpSubmit = (e) => {
     e.preventDefault();
-    console.log('Signing up with:', fullName, email, password, confirmPassword);
+    // Check if password matches confirm password
+    if (password !== confirmPassword) {
+      alert("Passwords don't match");
+      return;
+    }
+    // Save user data in local storage
+    localStorage.setItem('userData', JSON.stringify({ fullName, email, password }));
+    console.log('Signed up with:', fullName, email, password);
+    // Redirect to login page
+    window.location.href = '/login';
   };
 
   return (
@@ -45,7 +54,7 @@ const SignUp = () => {
           <p className="text-center">Already have an account? <Link to="/login" className="text-purple-500 font-semibold hover:underline">Login</Link></p>
         </div>
       </div>
-          <Footer/>
+      <Footer/>
     </div>
   );
 };

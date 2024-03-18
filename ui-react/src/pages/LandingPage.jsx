@@ -1,23 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Public/Header';
 import Navbar from '../components/Public/Navbar';
+import UserNavbar from '../components/Auth/UserNavbar';
 import Footer from '../components/Public/Footer';
 import Loading from '../Loading';
 import '@fontsource/poppins'; 
 
-
 const LandingPage = () => {
-  const [showPopup, setShowPopup] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Define isLoggedIn state
+
+  useEffect(() => {
+    // Check if the user is logged in based on email stored in localStorage
+    const userEmail = localStorage.getItem('userEmail');
+    if (userEmail) {
+      setIsLoggedIn(true);
+    }
+  }, []);
 
   const togglePopup = () => {
     setShowPopup(!showPopup);
   };
 
-  return (
+   return (
     <div className="bg-gradient-to-r from-[#000428] to-[#004e92] min-h-screen font-poppins">
       <Header />
-      <Navbar />
+      <div>
+      {isLoggedIn ? <UserNavbar /> : <Navbar />}
+      {/* Rest of your landing page content */}
+    </div>
       <header className="py-4">
         <div className="container mx-auto flex flex-col justify-center items-center">
           <Link to="/" className="text-[#3cadc1] font-bold text-4xl mt-10">Find your dream job now</Link>
@@ -128,7 +139,7 @@ const LandingPage = () => {
 
         <section className="py-8 overflow-hidden">
           <div className="mx-auto px-10 ml-0 flex justify-center items-center mb-10">
-            <div className="bg-white bg-opacity-15 rounded-lg shadow-md p-4 text-sm w-screen shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]">
+            <div className="bg-white bg-opacity-15 rounded-lg  p-4 text-sm w-screen shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]">
               {/* <img src="https://cdn.dribbble.com/userupload/13629248/file/original-89eca8f37697efa295955ac0f4482cd1.png?resize=1024x1205" alt="Image" className="w-10 h-10 float-left mr-4" /> */}
               <div className="text-center">
                 <h1 className="text-2xl font-bold mt-20">Introducing a career platform for college students & fresh grads</h1>
