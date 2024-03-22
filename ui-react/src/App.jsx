@@ -1,7 +1,7 @@
 import React, { lazy, Suspense, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Loading from './Loading';
-import ErrorPage from './ErrorPage'; // Import the ErrorPage component
+import ErrorPage from './ErrorPage'; 
 
 // Lazy-loaded components
 const UserNavbar = lazy(() => import('./components/Auth/UserNavbar'));

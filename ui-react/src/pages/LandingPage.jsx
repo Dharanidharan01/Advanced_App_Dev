@@ -218,7 +218,7 @@ const LandingPage = () => {
     </br>
     <br></br>
     <p className='text-yellow-600 mt-5'>Ideal For: Large Enterprises and Organizations with Specific Needs</p>
-    <Link to="/enterprise-plan" className="block mt-10 text-center bg-purple-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Contact Us</Link>
+    <Link to="/enterprise-plan" className="block mt-10 text-center bg-purple-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Upgrade</Link>
   </div>
 </div>
 

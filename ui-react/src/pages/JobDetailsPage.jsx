@@ -59,24 +59,25 @@ const JobDetailsPage = () => {
 
           {/* Repeat this block for each additional card */}
           <div className="bg-white rounded-lg shadow-lg h-max p-6 w-96 mt-0 mr-4">
-            <h1 className="text-2xl font-bold mb-4 text-indigo-600 font-poppins">Dummy Job Details</h1>
+            <h1 className="text-2xl font-bold mb-4 text-indigo-600 font-poppins">Job Details</h1>
             <div className="bg-gray-100 rounded-lg shadow-md p-3 mb-3">
               <h2 className="text-lg font-semibold mb-1">Job Information</h2>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Title: Dummy Title</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Description: Dummy Description</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Requirements: Dummy Requirements</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Title: Junior Java Developer</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Description: Expertise in designing and development of responsive web development.</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Requirements: Strong knowledge and hands on development experience on primary skills Java Microservices Developer, Java/J2EE, AWS, Spring MVC, SpringBoot Hibernate</p>
             </div>
             <div className="bg-gray-100 rounded-lg shadow-md p-3 mb-3">
               <h2 className="text-lg font-semibold mb-1">Job Requirements</h2>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Required Skills: Dummy Skills</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Roles: Dummy Roles</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Responsibilities: Dummy Responsibilities</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Required Skills: ava/J2EE, AWS, Spring MVC, SpringBoot Hibernate</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Roles: Utilizing messaging and event-driven architectures such as Apache Kafka/RabbitMQ</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Responsibilities: Knowledge and hands on experience on REST API, DB2, Github, TestNG/Junit, Selenium Technologies
+Good functional analysis skill</p>
             </div>
             <div className="bg-gray-100 rounded-lg shadow-md p-3 mb-3">
               <h2 className="text-lg font-semibold mb-1">Additional Information</h2>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Time Period: Dummy Period</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Salary: Dummy Salary</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Location: Dummy Location</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Time Period: Full-time</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Salary: 10-15 LPA</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Location: Chennai</p>
             </div>
             <button className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-500 focus:ring-opacity-50">
               Apply
@@ -84,24 +85,25 @@ const JobDetailsPage = () => {
           </div>
           {/* Repeat this block for each additional card */}
           <div className="bg-white rounded-lg shadow-lg h-max p-6 w-96 mt-0 mr-4">
-            <h1 className="text-2xl font-bold mb-4 text-indigo-600 font-poppins">Dummy Job Details</h1>
+            <h1 className="text-2xl font-bold mb-4 text-indigo-600 font-poppins">Job Details</h1>
             <div className="bg-gray-100 rounded-lg shadow-md p-3 mb-3">
               <h2 className="text-lg font-semibold mb-1">Job Information</h2>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Title: Dummy Title</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Description: Dummy Description</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Requirements: Dummy Requirements</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Title: Junior Java Developer</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Description: Expertise in designing and development of responsive web development.</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Requirements: Strong knowledge and hands on development experience on primary skills Java Microservices Developer, Java/J2EE, AWS, Spring MVC, SpringBoot Hibernate</p>
             </div>
             <div className="bg-gray-100 rounded-lg shadow-md p-3 mb-3">
               <h2 className="text-lg font-semibold mb-1">Job Requirements</h2>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Required Skills: Dummy Skills</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Roles: Dummy Roles</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Responsibilities: Dummy Responsibilities</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Required Skills: ava/J2EE, AWS, Spring MVC, SpringBoot Hibernate</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Roles: Utilizing messaging and event-driven architectures such as Apache Kafka/RabbitMQ</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Responsibilities: Knowledge and hands on experience on REST API, DB2, Github, TestNG/Junit, Selenium Technologies
+Good functional analysis skill</p>
             </div>
             <div className="bg-gray-100 rounded-lg shadow-md p-3 mb-3">
               <h2 className="text-lg font-semibold mb-1">Additional Information</h2>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Time Period: Dummy Period</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Salary: Dummy Salary</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Location: Dummy Location</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Time Period: Full-time</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Salary: 10-15 LPA</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Location: Chennai</p>
             </div>
             <button className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-500 focus:ring-opacity-50">
               Apply
@@ -109,24 +111,25 @@ const JobDetailsPage = () => {
           </div>
           {/* Repeat this block for each additional card */}
           <div className="bg-white rounded-lg shadow-lg h-max p-6 w-96 mt-0 mr-4">
-            <h1 className="text-2xl font-bold mb-4 text-indigo-600 font-poppins">Dummy Job Details</h1>
+            <h1 className="text-2xl font-bold mb-4 text-indigo-600 font-poppins">Job Details</h1>
             <div className="bg-gray-100 rounded-lg shadow-md p-3 mb-3">
               <h2 className="text-lg font-semibold mb-1">Job Information</h2>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Title: Dummy Title</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Description: Dummy Description</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Requirements: Dummy Requirements</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Title: Junior Java Developer</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Description: Expertise in designing and development of responsive web development.</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Requirements: Strong knowledge and hands on development experience on primary skills Java Microservices Developer, Java/J2EE, AWS, Spring MVC, SpringBoot Hibernate</p>
             </div>
             <div className="bg-gray-100 rounded-lg shadow-md p-3 mb-3">
               <h2 className="text-lg font-semibold mb-1">Job Requirements</h2>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Required Skills: Dummy Skills</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Roles: Dummy Roles</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Responsibilities: Dummy Responsibilities</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Required Skills: ava/J2EE, AWS, Spring MVC, SpringBoot Hibernate</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Roles: Utilizing messaging and event-driven architectures such as Apache Kafka/RabbitMQ</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Responsibilities: Knowledge and hands on experience on REST API, DB2, Github, TestNG/Junit, Selenium Technologies
+Good functional analysis skill</p>
             </div>
             <div className="bg-gray-100 rounded-lg shadow-md p-3 mb-3">
               <h2 className="text-lg font-semibold mb-1">Additional Information</h2>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Time Period: Dummy Period</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Salary: Dummy Salary</p>
-              <p className="text-sm text-gray-700 font-poppins mb-1">Location: Dummy Location</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Time Period: Full-time</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Salary: 10-15 LPA</p>
+              <p className="text-sm text-gray-700 font-poppins mb-1">Location: Chennai</p>
             </div>
             <button className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-500 focus:ring-opacity-50">
               Apply

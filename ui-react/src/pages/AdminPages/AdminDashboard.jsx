@@ -10,8 +10,8 @@ const AdminDashboard = () => {
     
       <div className="flex">
         <AdminSidebar/>
-             {/* <JobPosting/> */}
-         <DetailDashboard/>
+             <JobPosting/>
+         {/* <DetailDashboard/> */}
         
       </div>
     </div>
