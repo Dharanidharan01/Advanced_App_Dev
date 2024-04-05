@@ -16,7 +16,7 @@ function Dashboard() {
   const [resumeName, setResumeName] = useState(null);
 
   useEffect(() => {
-    // Retrieve user's name from local storage
+    
     const userData = JSON.parse(localStorage.getItem('userData'));
     if (userData && userData.fullName) {
       setName(userData.fullName);

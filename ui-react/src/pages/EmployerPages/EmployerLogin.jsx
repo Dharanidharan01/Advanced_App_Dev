@@ -6,7 +6,7 @@ import NavbarHeader from '../../components/Public/Header';
 import Footer from '../../components/Public/Footer';
 import Navbar from '../../components/Public/Navbar';
 
-// Define EmployerLogin component
+
 const EmployerLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
