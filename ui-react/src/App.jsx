@@ -2,6 +2,7 @@ import React, { lazy, Suspense, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Loading from './Loading';
 import ErrorPage from './ErrorPage'; 
+import JobApplicationForm from './layouts/JobApplicationForm';
 
 // Lazy-loaded components
 const UserNavbar = lazy(() => import('./components/Auth/UserNavbar'));
@@ -56,6 +57,7 @@ const App = () => {
           <Route path="/asidebar" element={<AdminSidebar />} />
           <Route path="/adashboard" element={<AdminDashboard />} />
           <Route path="/detaildashboard" element={<DetailDashboard />} />
+          <Route path="/jobapplicationform" element={<JobApplicationForm />} />
 
           {/* Fallback route for any unmatched paths */}
           <Route path="*" element={<ErrorPage />} />

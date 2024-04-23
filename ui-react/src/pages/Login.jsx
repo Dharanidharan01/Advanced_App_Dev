@@ -13,7 +13,10 @@ const Login = ({ onLogin }) => {
     const userData = JSON.parse(localStorage.getItem('userData'));
     if (userData && userData.email === email && userData.password === password) {
       console.log('Logging in with:', email, password);
-      onLogin(); 
+      const Token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9eyJpZCI6MTIzNDU2Nzg5LCJuYW1lIjoiSm9zZXBoIn0';
+      localStorage.setItem('token', Token);
+
+      onLogin();
       window.location.href = '/dashboard';
     } else {
       alert('Invalid email or password');
