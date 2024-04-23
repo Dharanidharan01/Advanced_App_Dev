@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Loading from './Loading';
 import ErrorPage from './ErrorPage'; 
 import JobApplicationForm from './layouts/JobApplicationForm';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 // Lazy-loaded components
 const UserNavbar = lazy(() => import('./components/Auth/UserNavbar'));
@@ -36,6 +37,7 @@ const App = () => {
   return (
     <Router>
       <Suspense fallback={<Loading />}>
+        <SpeedInsights/>
         <Routes>
           <Route path="/navbar" element={<UserNavbar />} />
           <Route path="/jobposting" element={<JobPosting />} />
