@@ -53,9 +53,10 @@ function Dashboard() {
     <UserNavbar/>'>
     <div className="container mx-auto px-10 mt-0  bg-gradient-to-r from-[#000428] to-[#004e92] mb-10">
       <UserNavbar/>
-      <div className="rounded-xl mt-0 p-8 shadow-lg  bg-white">
-        <h1 className="text-3xl font-bold mb-4 text-indigo-400 font-poppins">Dashboard</h1>
-        
+      <div className="rounded-xl mt-0 p-8 shadow-lg bg-white">
+    <h1 className="text-3xl font-bold mb-4 text-indigo-400 font-poppins">Dashboard</h1>
+    <button onClick={() => { window.location.href = '/signup'; }} className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Logout</button>
+    <button onClick={() => { window.location.href = '/signup'; }} className="bg-green-500 hover:bg-red-600 text-white font-bold py-2 px-4 ml-10 rounded">Save </button>
         {/* Add profile photo */}
         <div className="flex items-center mt-10 mb-4">
           <label htmlFor="profile-photo" className="cursor-pointer flex items-center">
@@ -263,7 +264,7 @@ function Dashboard() {
               <input type="text" className="text-lg outline-none ml-10" placeholder="Add address" />
             </div>
           </div>
-          </div>
+              </div>
           </div>
           </div>
           </div>
