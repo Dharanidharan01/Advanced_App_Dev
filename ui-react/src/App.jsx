@@ -1,9 +1,9 @@
 import React, { lazy, Suspense, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Loading from './Loading';
 import ErrorPage from './ErrorPage'; 
 import JobApplicationForm from './layouts/JobApplicationForm';
-import { SpeedInsights } from "@vercel/speed-insights/react"
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 // Lazy-loaded components
 const UserNavbar = lazy(() => import('./components/Auth/UserNavbar'));
@@ -34,6 +34,15 @@ const App = () => {
     setIsLoggedIn(true);
   };
 
+  // ProtectedRoute component to handle protected routes
+  const ProtectedRoute = ({ element, ...rest }) => {
+    return isLoggedIn ? (
+      element
+    ) : (
+      <Navigate to="/login" replace />
+    );
+  };
+
   return (
     <Router>
       <Suspense fallback={<Loading />}>
@@ -51,9 +60,9 @@ const App = () => {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/terms" element={<TermsAndConditions />} />
           <Route path="/sidebar" element={<Sidebar />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<ProtectedRoute element={<Dashboard />} />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
-          <Route path="/settings" element={<Settings />} />
+          <Route path="/settings" element={<ProtectedRoute element={<Settings />} />} />
           <Route path="/elogin" element={<EmployerLogin />} />
           <Route path="/esignup" element={<EmployerSignup />} />
           <Route path="/asidebar" element={<AdminSidebar />} />
