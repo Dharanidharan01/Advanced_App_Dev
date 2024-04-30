@@ -68,7 +68,7 @@ const LandingPage = () => {
           <div className="flex justify-center space-x-4">
             <div className="bg-white rounded-full px-4 py-2 text-sm">All</div>
             <div className="bg-white rounded-full px-4 py-2 text-sm">IT Services</div>
-            <div className="bg-white rounded-full px-4 py-2 text-sm">BFS</div>
+            <div className="bg-white rounded-full px-4 py-2 text-sm">Non-IT</div>
           </div>
         </div>
 
